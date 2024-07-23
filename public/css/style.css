@@ -25,10 +25,67 @@ a {
     color: var(--text-color);
 }
 
+/* Header fijo */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
 .menu {
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__logo {
+    width: 50px;
+}
+
+.menu__title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menu__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu__list__item {
+    margin-right: 20px;
+}
+
+.menu__list__item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu__list__item a:hover {
+    text-decoration: underline;
+}
+
+.menu__contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu__contact a:hover {
+    text-decoration: underline;
 }
 
 .menu__header {
