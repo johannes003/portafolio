@@ -29,11 +29,11 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: var(--highlight-color);
     color: #fff;
     z-index: 1000;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu {
@@ -43,8 +43,10 @@ a {
     flex-wrap: wrap;
 }
 
-.menu__logo {
-    width: 50px;
+.menu__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .menu__title {
@@ -60,50 +62,18 @@ nav {
 }
 
 .menu__list {
-    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.menu__list__item {
-    margin-right: 0;
-}
-
 .menu__list__item a {
-    color: #000000;
-    text-decoration: none;
+    color: var(--text-color);
     font-weight: bold;
 }
 
 .menu__list__item a:hover {
     text-decoration: underline;
-}
-
-.menu__contact a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu__contact a:hover {
-    text-decoration: underline;
-}
-
-.menu__header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.menu__title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.menu__list__item__contato {
-    margin-top: 20px;
-    font-weight: bold;
 }
 
 .title {
@@ -141,10 +111,6 @@ nav {
     margin-top: 20px;
 }
 
-.title__network__item {
-    font-size: 1.1em;
-}
-
 .about {
     background-color: #fafafa;
     padding: 50px 20px;
@@ -164,10 +130,6 @@ nav {
 .about__paragraph {
     margin: 20px 0;
     font-size: 1.1em;
-}
-
-.about__paragraph:last-child {
-    margin-bottom: 40px;
 }
 
 .skills {
@@ -265,15 +227,6 @@ nav {
     margin-bottom: 10px;
 }
 
-.academic__courses__item__title {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.academic__courses__item__subtitle {
-    color: var(--highlight-color);
-}
-
 .experience {
     background-color: #fafafa;
     padding: 50px 20px;
@@ -286,20 +239,14 @@ nav {
 }
 
 .experience__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .experience__img {
     width: 100%;
     max-width: 600px;
     margin-bottom: 20px;
-}
-
-.experience__info {
-    text-align: center;
 }
 
 .experience__title {
@@ -318,10 +265,6 @@ nav {
     justify-content: center;
 }
 
-.experience__repo, .experience__demo {
-    font-size: 1.1em;
-}
-
 .experience__botao--repo, .experience__botao--demo {
     background-color: var(--highlight-color);
     color: #fff;
@@ -329,6 +272,7 @@ nav {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.1em;
 }
 
 .formcontato {
@@ -344,17 +288,12 @@ nav {
     text-align: center;
 }
 
-.formcontato--esquerda {
-    flex: 1;
-}
-
 .formcontato__img {
     width: 100%;
     max-width: 400px;
 }
 
 .formcontato__text {
-    flex: 1;
     max-width: 600px;
 }
 
@@ -397,7 +336,7 @@ nav {
 }
 
 .footer {
-    background-color: #333;
+    background-color: var(--highlight-color);
     color: #fff;
     text-align: center;
     padding: 20px;
